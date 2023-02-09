@@ -21,13 +21,13 @@ header {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    padding: .4rem 1rem;
+    padding: .4rem 2.5rem;
 }
 
 .search {
     background-color: transparent;
     border: 2px solid var(--secondary-color);
-    padding: .6rem .4rem;
+    padding: .6rem .8rem;
     border-radius: 40px;
     margin: .4rem 0;
     font-size: 1rem;
@@ -36,6 +36,7 @@ header {
 
 .search::placeholder {
     color: #7378c5;
+    padding-left: 5px;
 }
 
 input:focus {
@@ -74,6 +75,18 @@ input:focus {
     border-radius: 4px;
 }
 
+.movie-info span.green {
+    color: green;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
 .overview {
     background-color: #eee;
     padding: 1rem;
@@ -89,4 +102,10 @@ input:focus {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+@media (max-width:556px) {
+    header {
+        justify-content: center;
+    }
 }
