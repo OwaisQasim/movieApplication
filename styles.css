@@ -10,6 +10,7 @@
 }
 
 body {
+
     background-color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -109,4 +110,29 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    margin: 25px 10px;
+    width: 100px;
+    padding: 8px 14px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 3px;
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+.buttons:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.buttons:focus {
+    outline: none;
 }
