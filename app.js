@@ -83,3 +83,24 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scroll');
     }
 });
+
+// prevBtn.addEventListener('click', () => {
+//     if (currentPage > 1) {
+//         currentPage--
+//         getMovies(API_URL + currentPage)
+//     }
+// })
+
+// nextBtn.addEventListener('click', () => {
+//     currentPage++
+//     getMovies(API_URL + currentPage)
+// })
+
+// window.addEventListener('scroll', () => {
+//     if (window.scrollY > 0) {
+//         header.classList.add('scroll');
+//     } else {
+//         header.classList.remove('scroll');
+//     }
+// });
+
