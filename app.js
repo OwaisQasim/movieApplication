@@ -6,6 +6,7 @@ const form = document.getElementById('form');
 const search = document.getElementById('search')
 const prevBtn = document.getElementById('prev')
 const nextBtn = document.getElementById('next')
+const header = document.getElementById('header')
 
 let currentPage = 1
 
@@ -14,7 +15,7 @@ getMovies(API_URL + currentPage)
 async function getMovies(url) {
     const response = await fetch(url)
     const data = await response.json()
-    showMovies(data.results)
+    showMovies(data.results.slice(0, 15))
 }
 
 function showMovies(movies) {
@@ -36,6 +37,7 @@ function showMovies(movies) {
         `
         main.appendChild(movieElement)
     })
+    window.scrollTo(0, 0)
 }
 
 function getClassByRate(vote) {
@@ -73,3 +75,11 @@ form.addEventListener('submit', (e) => {
         window.location.reload()
     }
 })
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('scroll');
+    } else {
+        header.classList.remove('scroll');
+    }
+});

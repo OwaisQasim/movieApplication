@@ -16,11 +16,40 @@ body {
     margin: 0;
 }
 
+ul li a {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ul {
+    display: flex;
+    width: 74%;
+}
+
+ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 20px;
+}
+
+
 header {
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
     background-color: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header.scroll {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.5s ease-in;
 }
 
 .search {
@@ -106,6 +135,10 @@ main {
     transform: translateY(101%);
     overflow-y: auto;
     transition: transform 0.3s ease-in;
+}
+
+.movie:hover {
+    cursor: pointer;
 }
 
 .movie:hover .overview {
